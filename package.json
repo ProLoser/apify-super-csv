@@ -4,7 +4,7 @@
   "type": "module",
   "description": "Apify actor that fetches CSV files from URLs and converts them to datasets, with optional custom field names.",
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   },
   "dependencies": {
     "apify": "^3.1.10",
