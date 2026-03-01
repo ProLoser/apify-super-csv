@@ -1,0 +1,27 @@
+{
+  "title": "Super CSV Crawler",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "csvUrls": {
+      "title": "CSV URLs",
+      "type": "array",
+      "description": "URLs of CSV files to fetch and convert to dataset",
+      "editor": "requestListSources"
+    },
+    "separator": {
+      "title": "Column separator",
+      "type": "string",
+      "default": ",",
+      "description": "Usually `,` or `;`",
+      "editor": "textfield"
+    },
+    "fieldNames": {
+      "title": "Field names",
+      "type": "array",
+      "description": "Optional array of column names. If provided, these are used as keys instead of the first row of the CSV. When omitted, the first row is treated as the header.",
+      "editor": "stringList",
+      "placeholderValue": ["column1", "column2"]
+    }
+  }
+}

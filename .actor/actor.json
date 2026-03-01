@@ -1,0 +1,12 @@
+{
+  "actorSpecification": 1,
+  "name": "super-csv-crawler",
+  "title": "Super CSV Crawler",
+  "description": "Fetches CSV files from URLs and converts them to Apify datasets. Supports custom field names instead of using the first row as headers.",
+  "version": "0.0",
+  "meta": {
+    "templateId": "js-crawlee-cheerio"
+  },
+  "input": "./input_schema.json",
+  "dockerfile": "./Dockerfile"
+}
