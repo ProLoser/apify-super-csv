@@ -5,9 +5,13 @@ import neatCsv from 'neat-csv';
 // Initialize the Apify SDK
 await Actor.init();
 
-const { csvUrls, separator = ',', fieldNames } = await Actor.getValue('INPUT');
+const { csvUrls, separator = ',', fieldNames } = await Actor.getValue('INPUT') || {};
 
-const urls = csvUrls.map((req) => req?.url || req?.requestsFromUrl).filter(Boolean);
+const urls = (csvUrls || []).map((req) => req?.url || req?.requestsFromUrl).filter(Boolean);
+
+if (!urls.length) {
+    await Actor.fail('No CSV URLs provided. Please provide at least one URL in the csvUrls input field.');
+}
 
 await Actor.setStatusMessage(`Received ${urls.length} CSV URLs. Starting download.`);
 
