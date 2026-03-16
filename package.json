@@ -9,6 +9,7 @@
   "dependencies": {
     "apify": "^3.1.10",
     "crawlee": "^3.5.4",
+    "got-scraping": "^4.0.0",
     "neat-csv": "^7.0.0"
   },
   "devDependencies": {
@@ -19,7 +20,7 @@
     "start": "node src/main.js",
     "lint": "eslint ./src --ext .js,.jsx",
     "lint:fix": "eslint ./src --ext .js,.jsx --fix",
-    "test": "echo \"Error: oops, the actor has no tests yet, sad!\" && exit 1"
+    "test": "node --test"
   },
   "author": "",
   "license": "ISC"
