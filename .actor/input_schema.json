@@ -29,14 +29,14 @@
         "car_make",
         "car_model"
       ]
+    },
+    "start_urls": {
+      "title": "Start URLs", 
+      "type": "array",
+      "description": "URLs to start with",
+      "prefill": [
+          { "url": "https://raw.githubusercontent.com/ProLoser/apify-super-csv/refs/heads/main/MOCK_DATA.csv" }
+      ]
     }
-  },
-  "start_urls": {
-    "title": "Start URLs", 
-    "type": "array",
-    "description": "URLs to start with",
-    "prefill": [
-        { "url": "https://raw.githubusercontent.com/ProLoser/apify-super-csv/refs/heads/main/MOCK_DATA.csv" }
-    ]
   }
 }
