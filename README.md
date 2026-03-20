@@ -42,14 +42,14 @@ Output: `[{ Name: "Alice", Age: "30", Role: "Engineer" }, ...]`
 
 ## Schema Validation
 
-The input schema (`.actor/input_schema.json`) is validated automatically on every push and pull request via the `validate-schema` GitHub Actions workflow.
+The input schema (`.actor/input_schema.json`) is validated automatically on every push and pull request via the `test` GitHub Actions workflow.
 
 ### Local Validation
 
 Install the [Apify CLI](https://docs.apify.com/cli) and run:
 
 ```bash
-npm run validate-schema
+npm test
 ```
 
 This uses `apify validate-schema`, which checks these locations in priority order:
@@ -62,7 +62,7 @@ This uses `apify validate-schema`, which checks these locations in priority orde
 You can also validate a custom path directly:
 
 ```bash
-apify validate-schema path/to/INPUT_SCHEMA.json
+npx -y apify-cli validate-schema path/to/INPUT_SCHEMA.json
 ```
 
 ### Visual Schema Editor
