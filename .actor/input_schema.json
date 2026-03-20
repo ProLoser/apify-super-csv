@@ -7,7 +7,8 @@
       "title": "CSV URLs",
       "type": "array",
       "description": "URLs of CSV files to fetch and convert to dataset",
-      "editor": "requestListSources"
+      "editor": "requestListSources",
+      "prefill": [ "https://raw.githubusercontent.com/ProLoser/apify-super-csv/refs/heads/main/MOCK_DATA.csv" ]
     },
     "separator": {
       "title": "Column separator",
@@ -28,14 +29,6 @@
         "gender",
         "car_make",
         "car_model"
-      ]
-    },
-    "start_urls": {
-      "title": "Start URLs", 
-      "type": "array",
-      "description": "URLs to start with",
-      "prefill": [
-          { "url": "https://raw.githubusercontent.com/ProLoser/apify-super-csv/refs/heads/main/MOCK_DATA.csv" }
       ]
     }
   }
