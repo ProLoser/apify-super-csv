@@ -39,3 +39,32 @@ Bob,25,Designer
 ```
 Input: omit `fieldNames`  
 Output: `[{ Name: "Alice", Age: "30", Role: "Engineer" }, ...]`
+
+## Schema Validation
+
+The input schema (`.actor/input_schema.json`) is validated automatically on every push and pull request via the `validate-schema` GitHub Actions workflow.
+
+### Local Validation
+
+Install the [Apify CLI](https://docs.apify.com/cli) and run:
+
+```bash
+npm run validate-schema
+```
+
+This uses `apify validate-schema`, which checks these locations in priority order:
+
+1. Object in `.actor/actor.json` under the `"input"` key
+2. JSON file path in `.actor/actor.json` `"input"` key
+3. `.actor/INPUT_SCHEMA.json`
+4. `INPUT_SCHEMA.json`
+
+You can also validate a custom path directly:
+
+```bash
+apify validate-schema path/to/INPUT_SCHEMA.json
+```
+
+### Visual Schema Editor
+
+For creating and editing input schemas visually, use the [Apify Input Schema Editor](https://apify.github.io/input-schema-editor-react/).
