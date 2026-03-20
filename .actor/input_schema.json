@@ -8,7 +8,7 @@
       "type": "array",
       "description": "URLs of CSV files to fetch and convert to dataset",
       "editor": "requestListSources",
-      "prefill": [ "https://raw.githubusercontent.com/ProLoser/apify-super-csv/refs/heads/main/MOCK_DATA.csv" ]
+      "prefill": [ { "url": "https://raw.githubusercontent.com/ProLoser/apify-super-csv/refs/heads/main/MOCK_DATA.csv" } ]
     },
     "separator": {
       "title": "Column separator",
