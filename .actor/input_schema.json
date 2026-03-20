@@ -20,7 +20,23 @@
       "title": "Field names",
       "type": "array",
       "description": "Optional array of column names. If provided, these are used as keys instead of the first row of the CSV. When omitted, the first row is treated as the header.",
-      "editor": "stringList"
+      "editor": "stringList",
+      "prefill": [
+        "id",
+        "first_name",
+        "last_name",
+        "gender",
+        "car_make",
+        "car_model"
+      ]
     }
+  },
+  "start_urls": {
+    "title": "Start URLs", 
+    "type": "array",
+    "description": "URLs to start with",
+    "prefill": [
+        { "url": "https://raw.githubusercontent.com/ProLoser/apify-super-csv/refs/heads/main/MOCK_DATA.csv" }
+    ]
   }
 }
